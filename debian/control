@@ -1,0 +1,59 @@
+Source: pytest-mock
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Vincent Bernat <bernat@debian.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               dh-sequence-python3,
+               python3-all,
+               python3-mock,
+               python3-pytest (>= 7.1.2),
+               python3-pytest-asyncio (>= 0.18),
+               python3-setuptools,
+               python3-setuptools-scm,
+               python3-sphinx-copybutton <!nodoc>,
+               python3-sphinx-rtd-theme <!nodoc>,
+               sphinx <!nodoc>
+Standards-Version: 4.6.1
+Vcs-Browser: https://salsa.debian.org/python-team/packages/pytest-mock
+Vcs-Git: https://salsa.debian.org/python-team/packages/pytest-mock.git
+Homepage: https://github.com/pytest-dev/pytest-mock/
+Rules-Requires-Root: no
+
+Package: python3-pytest-mock
+Architecture: all
+Depends: python3-pytest | python3-pytest (<< 3),
+         ${misc:Depends},
+         ${python3:Depends}
+Recommends: ${python3:Recommends}
+Suggests: python-pytest-mock-doc,
+          python3-mock,
+          ${python3:Suggests}
+Description: Thin wrapper around mock for easier use with pytest (Python 3 module)
+ This plugin installs a "mocker" fixture which is a thin wrapper
+ around the patching API provided by the excellent "mock" package or
+ by unittest.mock, but with the benefit of not having to worry about
+ undoing patches at the end of a test.  It also provides other nice
+ utilities such as spy and stub, and uses pytest introspection when
+ comparing calls.
+ .
+ This package provides the Python 3 module.
+
+Package: python-pytest-mock-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends}
+Recommends: python3-pytest-mock
+Multi-Arch: foreign
+Description: Documentation of the Pytest Mock plugin (HTML)
+ The pytest-mock plugin installs a "mocker" fixture which is a thin
+ wrapper around the patching API provided by the excellent "mock" package
+ or by unittest.mock, but with the benefit of not having to worry about
+ undoing patches at the end of a test.  It also provides other nice
+ utilities such as spy and stub, and uses pytest introspection when
+ comparing calls.
+ .
+ This package contains the HTML documentation of the pytest-mock plugin.
+Build-Profiles: <!nodoc>

@@ -1,0 +1,12 @@
+Test-Command: set -e
+ ; cp -r tests "$AUTOPKGTEST_TMP"
+ ; for py in $(py3versions -s)
+ ; do cd "$AUTOPKGTEST_TMP"
+ ; echo "Testing with $py:"
+ ; $py -m pytest -v --assert=plain -o asyncio_mode=auto
+ ; done
+Depends: python3-all,
+         python3-mock,
+         python3-pytest (>= 7.1.2),
+         python3-pytest-asyncio (>= 0.18),
+         python3-pytest-mock

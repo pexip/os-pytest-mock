@@ -1,0 +1,170 @@
+pytest-mock (3.8.2-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable):
+    + python3-pytest-mock: Drop versioned constraint on python3-pytest in
+      Depends.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Wed, 09 Nov 2022 20:40:50 +0000
+
+pytest-mock (3.8.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Source-only upload to allow migration to testing
+
+ -- Julian Gilbey <jdg@debian.org>  Sun, 17 Jul 2022 07:38:08 +0100
+
+pytest-mock (3.8.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version: this introduces sphinx-based documentation, so
+    split that out into a new package
+  * Explicitly depend on pytest 7
+
+ -- Julian Gilbey <jdg@debian.org>  Fri, 15 Jul 2022 18:46:34 +0100
+
+pytest-mock (3.7.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Specify version limit for python3-pytest-asyncio in Build-Depends and
+    autopkgtest; the asyncio_mode setting was only introduced in version
+    0.17 or 0.18.  This only affects the tests, not the binary package.
+
+ -- Julian Gilbey <jdg@debian.org>  Sun, 29 May 2022 10:29:20 +0100
+
+pytest-mock (3.7.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version (Closes: 1006736)
+
+ -- Julian Gilbey <jdg@debian.org>  Fri, 27 May 2022 07:37:21 +0100
+
+pytest-mock (3.6.1-1) unstable; urgency=medium
+
+  [ Diego M. Rodriguez ]
+  * New upstream version 3.6.1 (Closes: #993346)
+  * d/patches: drop existing patches
+  * d/rules: update test arguments
+  * d/control: add pytest-asyncio dependency
+  * d/tests: update autopkgtests
+  * d/control: bump Standards-Version to 4.6.0 (no changes needed)
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 07 Sep 2021 13:51:18 -0400
+
+pytest-mock (1.10.4-4) unstable; urgency=medium
+
+  * Team Upload.
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Nilesh Patra ]
+  * Clean _version.py pre-build (Closes: #978288)
+  * Bump debhelper-compat version to 13
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root:no"
+  * Drop XB-Python-Egg-Name field
+  * Switch watch version to 4
+
+ -- Nilesh Patra <npatra974@gmail.com>  Wed, 20 Jan 2021 22:52:20 +0530
+
+pytest-mock (1.10.4-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #937563
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 25 Dec 2019 12:39:37 -0500
+
+pytest-mock (1.10.4-2) unstable; urgency=medium
+
+  * Team upload.
+  * Bump required version of python-mock to 3.
+
+ -- Ondřej Nový <onovy@debian.org>  Thu, 19 Sep 2019 09:39:29 +0200
+
+pytest-mock (1.10.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #904304).
+  * d/control: Remove ancient X-Python3-Version field
+  * Use debhelper-compat instead of debian/compat.
+  * Fix compatibility with newer Python, python-mock and pytest
+    (Closes: #934960).
+  * Bump standards version to 4.4.0 (no changes).
+  * Bump debhelper compat level to 12.
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 24 Aug 2019 18:44:21 +0200
+
+pytest-mock (1.7.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+
+  [ Ghislain Antony Vaillant ]
+  * New upstream version 1.7.1
+  * Format the control file with cme
+  * Set the minimum Python 3 version to 3.4
+  * Setup the tests using the PYBUILD envvars
+  * Add autopkgtests for Python 2 and 3
+  * Add missing install dependency on mock
+  * Bump the debhelper version to 11
+  * Bump the standards version to 4.1.3
+
+ -- Ghislain Antony Vaillant <ghisvail@gmail.com>  Mon, 05 Mar 2018 22:45:31 +0000
+
+pytest-mock (1.6.3-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #872618.
+    + Fix FTBFS due to deprecated use of mock fixture. Closes: #871127.
+  * d/control: Build-Conflicts on python3-mock as tests are expecting it
+    to be absent.
+  * d/control: Build-Depends on python-mock (>= 2). Closes: #861245.
+  * d/control: bump Standards-Version.
+
+ -- Vincent Bernat <bernat@debian.org>  Mon, 18 Sep 2017 19:14:32 +0200
+
+pytest-mock (1.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+    + Drop patch for pytest3 support.
+  * d/control: Build-Depends on python{3,}-setuptools-scm.
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 01 Nov 2016 20:04:55 +0100
+
+pytest-mock (1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Patch to add support for pytest3. This also requires a recent version
+    of python{,3}-pytest. Closes: #835241.
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 15 Oct 2016 20:58:02 +0200
+
+pytest-mock (1.1-1) unstable; urgency=medium
+
+  [ Vincent Bernat ]
+  * New upstream release.
+  * Bump Standards-Version.
+  * Migrate the package to DPMT.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 02 Jul 2016 16:40:36 +0200
+
+pytest-mock (0.8.1-1) unstable; urgency=low
+
+  * Initial release. Closes: #801418.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 09 Oct 2015 23:27:28 +0200

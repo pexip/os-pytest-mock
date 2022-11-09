@@ -1,0 +1,18 @@
+Description: Use already packaged theme for documentation
+ Upstream uses the furo theme, which has not been packaged for Debian.
+ We switch to the common RTD theme instead.
+Forwarded: not-needed
+Author: Julian Gilbey <jdg@debian.org>
+Last-Update: 2022-07-15
+
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -42,7 +42,7 @@
+ # The theme to use for HTML and HTML Help pages.  See the documentation for
+ # a list of builtin themes.
+ #
+-html_theme = "furo"
++html_theme = "sphinx_rtd_theme"
+ 
+ # Add any paths that contain custom static files (such as style sheets) here,
+ # relative to this directory. They are copied after the builtin static files,

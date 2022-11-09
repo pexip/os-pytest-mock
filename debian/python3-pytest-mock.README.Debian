@@ -1,0 +1,9 @@
+Debian pytest-mock package
+==========================
+
+The HTML documentation for pytest-mock is available in the package
+python-pytest-mock-doc, and is available in
+/usr/share/doc/python3-pytest-mock/html
+when that package is installed.
+
+ -- Julian Gilbey <jdg@debian.org>, Fri, 15 Jul 2022 09:01:41 +0100

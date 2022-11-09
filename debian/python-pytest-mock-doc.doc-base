@@ -1,0 +1,10 @@
+Document: pytest-mock
+Title: Pytest Mock Manual
+Author: Bruno Oliveira <nicoddemus@gmail.com>
+Abstract: This manual describes the pytest-mock plugin for pytest,
+ which provides a thin wrapper around the "mock" package.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python3-pytest-mock/html/index.html
+Files: /usr/share/doc/python3-pytest-mock/html/*.html
